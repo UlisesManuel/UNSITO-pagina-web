@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            background: var( #770000);
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        .contenedor{
+            display: flex;
+            height: 100%;
+        }
+        .izquierda{
+            width: 25%;
+            background: var( #770000);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+        }
+        .preview-img{
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0.4 px; 12 rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+        .rigth{
+            width: 75%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .login-box{
+            background: #770000;
+            width: 350px;
+            padding: 35px;
+            border-radius: 15px;
+            border-radius: 15px;
+
+        }
+        input{
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #bbb;
+
+        }
+        input:focus{
+            border-color:  #770000;
+            outline: none;
+        }
+        button{
+            width: 100%;
+            padding: 12px;
+            color:  #770000;
+            font-size: 17px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        button:hover{
+            background-color:  #490404;
+            color: white;
+            transform: scale(1.03s);
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="izquierda">
+            <img src="Noticias/UnsisLogo.png" alt="UnsisLogo">
+            <h1 class="titulo_V"></h1>
+        </div>
+        <div class="derecha">
+            <br><br><br><br><br><br>
+            <div class="login_box">
+                <h2>Login</h2>
+                <form>
+                    <label for="Usuario"></label>
+                    <input type="text" placeholder="Ingresa tu Usuario">
+                    <label > Contraseña</label>
+                    <input type="password" placeholder=" Ingresa Contraseña">
+                    <br><br>
+                    <a href="formula1.html" ><button>Iniciar Sesión</button></a> 
+                </form>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

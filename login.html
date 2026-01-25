@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+
+    <style>
+        header{
+            background-color: antiquewhite;
+            color: rgb(241, 216, 177);
+            padding: 1rem;
+            border: 3px solid #900c0c;
+            
+
+        }
+
+        .columnaI{
+            text-decoration-color: #58abe2;
+            flex: 1;
+            padding: 0.1px;
+            margin: 0.1px;
+            text-align: left;
+    
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: antiquewhite;
+            font-family: Arial, sans-serif;
+        }
+
+        .containerB {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 1rem;
+        }
+
+        .loginBox{
+            width: 300px;
+            padding: 25px;
+            background: white;
+            border-radius: 8px;
+            
+        }
+
+        .loginBox h2{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .columna{
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .columna label{
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .columna input{
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .btn{
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background: #921605;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+
+        }
+
+        .btn:hover{
+            background: black;
+        }
+
+        .olvidar{
+            text-align: center;
+            margin-top: 10px;
+            font-size: 13px;
+            
+        }
+
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="containerB">
+            <div class="columnaI">
+                <br>
+                <img src="logo.png" alt="logo" width="800" height="80">
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="loginBox">
+            <h2>Iniciar sesión</h2>
+
+            <div class="columna">
+                <label>Usuario</label>
+                <input type="text" placeholder="Ingresa tu usuario">
+
+            </div>
+
+            <div class="columna">
+                <label>Contraseña</label>
+                <input type="password" placeholder="********">
+            </div>
+
+
+            <a href="formulario.html"><button class="btn">Entrar</button></a>
+
+            <p class="small-text">Olvide mi Contraseña</p>
+        </div>
+
+    </div>
+</body>
+</html>

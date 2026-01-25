@@ -1,0 +1,54 @@
+.contenedor {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-start;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.img-autor {
+    width: 40%;   
+    margin-right: 100px;
+    box-sizing: border-box;
+}
+
+
+.notatext {
+    width: 60%;  
+    box-sizing: border-box;
+    
+}
+.cabeza{
+    
+text-align: center;
+}
+
+.cabeza img {
+    width: 80%;
+    max-width: 1000px;
+}
+.contenedorJ{
+    display: flex;
+    flex-direction: column;   
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+.programa{
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-start;
+    flex-direction: row;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+.pr{
+    margin-left: 400px;
+    text-align: center;
+    text-align:justify ;
+    width: 60%;
+}

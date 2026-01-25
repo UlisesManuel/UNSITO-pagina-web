@@ -1,0 +1,139 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+:root {
+    --guinda: #7a0026;
+    --guinda-oscuro: #5a001c;
+    --gris-claro: #f2f2f2;
+    --gris: #cccccc;
+}
+
+/* Body */
+body {
+    background-color: var(--gris-claro);
+}
+
+/* Header */
+header {
+    background-color: var(--guinda);
+    padding: 15px;
+}
+
+.cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    height: 60px;
+    margin-right: 15px;
+}
+
+.titulo {
+    color: white;
+    font-size: 32px;
+}
+
+/* Contenedor */
+table {
+    width: 90%;
+    margin: 30px auto;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 15px;
+    font-weight: bold;
+    color: var(--guinda-oscuro);
+}
+
+input,
+textarea {
+    margin-top: 6px;
+    padding: 10px;
+    border: 1px solid var(--gris);
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Botones */
+button {
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--guinda);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--guinda-oscuro);
+}
+
+/* Footer */
+footer {
+    background-color: var(--guinda);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #ffd6e1;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+
+    .cont {
+        flex-direction: column;
+    }
+
+    .titulo {
+        font-size: 24px;
+    }
+
+    table {
+        width: 95%;
+        padding: 15px;
+    }
+
+    input,
+    textarea,
+    button {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .titulo {
+        font-size: 20px;
+    }
+
+    button {
+        width: 100%;
+    }
+}

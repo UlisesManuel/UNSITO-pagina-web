@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Universitario</title>
+    <link rel="stylesheet" href="CSS/Estilo-login.css">
+</head>
+<body>
+    
+    <div class="login-card">
+        <div class="logo-placeholder">
+            <img src="Noticias/UnsisLogo.png" alt="Logo Universidad">
+        </div>
+
+        <h2>Portal Académico</h2>
+
+        <form action="#">
+            <div class="input-group">
+                <label for="matricula">Numero de empleado / Usuario</label>
+                <input type="text" id="matricula" placeholder="Ej. 20240001" required>
+            </div>
+
+            <div class="input-group">
+                <label for="pass">Contraseña</label>
+                <input type="password" id="pass" placeholder="••••••••" required>
+            </div>
+
+            <button onclick="validarAcceso()"  type="button" class="btn-login">ENTRAR</button>
+        </form>
+
+        <div class="links">
+            <a href="#">¿Olvidaste tu contraseña?</a>
+        </div>
+    </div>
+<script src="foter-header.js"></script>
+</body>
+</html>
