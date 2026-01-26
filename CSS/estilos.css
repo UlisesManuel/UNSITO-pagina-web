@@ -1,186 +1,88 @@
-
-p{
+/*=========ESTILOS DE EL INICIO ============*/
+/* Configuración General */
+p {
     text-align: justify;
 }
+
+.contenedor-inicio {
+    display: block;
+    width: 95%;     
+    max-width: 1400px; 
+    margin: 0 auto;
+    padding: 20px 0;
+}
 .noticia {
-    border-bottom: 1px solid #ddd;
+    text-align: center; 
     padding-bottom: 20px;
     margin-bottom: 20px;
 }
-.carousel .noticia{
+
+.carousel .noticia {
     min-width: 100%;
     border-bottom: none;
     margin-bottom: 0;
 }
 
-img{
-    transition:transform 0.3s ease;
+/* Efectos en imagenes */
+img {
+    transition: transform 0.3s ease;
 }
+
+.carousel .imgnot {
+    width: 100%;
+    height: 550px;   
+    object-fit: cover;
+    border-radius: 15px; 
+    display: block;
+}
+
 img:hover {
-   transform: scale(1.05);
-   box-shadow: 0 8px 20px rgba(0, 0, 0,0.25);
+   transform: scale(1.02); 
+   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
-.titulo{
+
+/* Textos de la Noticia*/
+.noticia h2 {
     color: #770000;
-    font-size: 40px;
+    font-size: 36px;
+    margin-top: 20px;
+    margin-bottom: 15px;
 }
-.cont{
-    
-    display: flex;
-    align-items: center;
-    
-   
-}
-.logo{
-     width: 150px;
-     height: 150px;
-}
-.menu{
-    font-size: 20px;
-    align-content: center;
-    align-items: self-end;
-}
-.txt, a{
-    text-decoration: none;
-    color: #770000;
-    margin-left: 1px;
-    margin-inline-end: 50px;
-}
- 
- .imgnot{
-     width: 600px;
-    height: auto;
-    display: block;
- }
 
+.noticia p {
+    font-size: 18px;
+    color: #444;
+    max-width: 900px; 
+    margin: 0 auto 20px;
+    text-align: center;
+}
 
-.contenedor-noticias{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
-    justify-content: space-around;
-    max-width: 1200px;
-    margin-left: 200px;
-}
-.contenedor-inicio{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
-    justify-content: space-around;
-    max-width: 1200px;
-    margin: 0 auto ;
-}
-.izquierda{
-    width: 60%;
-    padding-right: 10px;
-    box-sizing: border-box;
-}
-.derecha{
-    width: 40%;
-}
-.txt a:hover {
-    color: #b30000; 
-    font-size: 22px;
-}
-.contenedor-examenes{
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
-    
-
-}
-.mensaje{
-    font-size: 30px;
-}
-.fechas {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-.carreras p,
-.pdfs a {
-    display: block;        
-    margin: 20px 0;
-}
-.pdfs a:hover{
-    text-decoration: underline;
-    transform: scale(1.1);
-}
-/* MENÚ DESPLEGABLE */
-.dropdown {
-    position: relative;
+.noticia a {
     display: inline-block;
-}
-
-.dropbtn {
-    cursor: pointer;
-    color: #770000;
+    padding: 10px 25px;
+    background-color: #770000;
+    color: white !important;
     text-decoration: none;
-    margin-inline-end: 50px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 230px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.25);
-    z-index: 1000;
-    padding: 10px 0;
+.noticia a:hover {
+    background-color: #b30000;
+    transform: scale(1.05);
 }
 
-.dropdown-content a {
-    display: block;
-    padding: 10px 15px;
-    text-decoration: none;
-    color: #770000;
-}
-
-.dropdown-content a:hover {
-    background-color: #f2f2f2;
-    font-size: 20px;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-/*Carousel*/
-.carousel{
+/* Contenedor del Carousel */
+.carousel {
+    width: 100%;
     position: relative;
     overflow: hidden;
+    border-radius: 15px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-.carousel-inner{
+.carousel-inner {
     display: flex;
     transition: transform 0.6s ease-in-out;
-}
-.carousel .imgnot{
-    width: 100%;
-    height: 400px;         
-    object-fit: cover;     
-    border-radius: 8px;    
-}
-.prev, .next{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0,0,0,0.6);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 18px;
-    z-index: 10;
-}
-
-.prev{
-    left: 10px;
-}
-
-.next{
-    right: 10px;
-}
-
-.prev:hover, .next:hover{
-    background: rgba(0,0,0,0.85);
 }

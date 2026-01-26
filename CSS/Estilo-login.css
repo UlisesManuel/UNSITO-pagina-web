@@ -1,11 +1,9 @@
-       
 :root {
     --vino-70: #630e16;      
     --crema-20: #f5f5dc;     
     --blanco-10: #ffffff;   
     --vino-obscuro: #4a0a10;
  }
-
 * {
     margin: 0;
     padding: 0;
@@ -17,15 +15,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* 70% Color Dominante */
     background-color: var(--vino-70);
     background-image: linear-gradient(135deg, var(--vino-70) 0%, var(--vino-obscuro) 100%);
 }
-
 .login-card {
     width: 100%;
     max-width: 400px;
-    /* 20% Color Secundario */
     background-color: var(--crema-20);
     padding: 40px;
     border-radius: 15px;
@@ -47,7 +42,7 @@ body {
     overflow: hidden;
 }
 
-/* Aquí va la imagen del logo */
+/* logo */
 .logo-placeholder img {
     max-width: 80%;
     height: auto;
@@ -121,4 +116,29 @@ transform: translateY(-2px);
 
 .links a:hover {
     text-decoration: underline;
+}
+header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.link-atras {
+    text-decoration: none;
+    color: var(--blanco-10);
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.link-atras:hover {
+    opacity: 1;
+}
+
+.link-atras .arrow {
+    font-size: 1.2rem;
 }
