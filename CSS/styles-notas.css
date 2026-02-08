@@ -98,11 +98,13 @@
     display: flex;
     gap: 15px;
     margin: 20px 0;
+    justify-content: center;
 }
 
 .galeria img {
     width: 50%;
     border-radius: 10px;
+
 }
 
 
