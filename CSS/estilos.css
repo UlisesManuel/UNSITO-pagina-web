@@ -1,20 +1,51 @@
-/*=========ESTILOS DE EL INICIO ============*/
-/* Configuración General */
+/*====CONFIGURACIÓN DE COLORES=====*/
+:root {
+    /*Paleta*/
+    --color-institucional: #770000;
+    --color-institucional-hover: #b30000;
+    --color-texto-parrafo: #444444;
+    --color-blanco: #ffffff;
+    --color-sombra: rgba(0, 0, 0, 0.25);
+    --color-sombra-suave: rgba(0, 0, 0, 0.1);
+    --colo-gris-suave: #f0f2f5; 
+    --altura-carrusel: 500px; 
+}
+
+/*====ESTILOS DE EL INICIO====*/
+body{
+    background-color: var(--colo-gris-suave);
+}
 p {
     text-align: justify;
 }
-
+/*==== CONTENEDOR PRINCIPAL ====*/
 .contenedor-inicio {
     display: block;
-    width: 95%;     
-    max-width: 1400px; 
+    width: 90%;          
+    max-width: 1100px;   
     margin: 0 auto;
     padding: 20px 0;
 }
+/*Noticial*/
 .noticia {
     text-align: center; 
     padding-bottom: 20px;
     margin-bottom: 20px;
+}
+
+/*====CAROUSEL====*/
+
+.carousel {
+    width: 90%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px; 
+    box-shadow: 0 10px 30px var(--color-sombra-suave);
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
 }
 
 .carousel .noticia {
@@ -23,66 +54,55 @@ p {
     margin-bottom: 0;
 }
 
-/* Efectos en imagenes */
+/*====ELEMENTOS VISUALES====*/
+
+/* Imagenes */
 img {
     transition: transform 0.3s ease;
 }
 
 .carousel .imgnot {
     width: 100%;
-    height: 550px;   
+    height: var(--altura-carrusel);
     object-fit: cover;
-    border-radius: 15px; 
+    border-radius: 15px 15px 0 0; 
     display: block;
 }
 
 img:hover {
    transform: scale(1.02); 
-   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+   box-shadow: 0 8px 20px var(--color-sombra);
 }
 
-/* Textos de la Noticia*/
+/* Textos */
 .noticia h2 {
-    color: #770000;
-    font-size: 36px;
-    margin-top: 20px;
-    margin-bottom: 15px;
+    color: var(--color-institucional);
+    font-size: 28px; 
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
 
 .noticia p {
-    font-size: 18px;
-    color: #444;
-    max-width: 900px; 
-    margin: 0 auto 20px;
+    font-size: 16px; 
+    color: var(--color-texto-parrafo);
+    max-width: 800px; 
+    margin: 0 auto 15px;
     text-align: center;
 }
 
 .noticia a {
     display: inline-block;
-    padding: 10px 25px;
-    background-color: #770000;
-    color: white !important;
+    padding: 8px 20px;
+    background-color: var(--color-institucional);
+    color: var(--color-blanco) !important;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     transition: 0.3s;
+    margin-bottom: 15px;
 }
 
 .noticia a:hover {
-    background-color: #b30000;
+    background-color: var(--color-institucional-hover);
     transform: scale(1.05);
-}
-
-/* Contenedor del Carousel */
-.carousel {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px; 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-.carousel-inner {
-    display: flex;
-    transition: transform 0.6s ease-in-out;
 }

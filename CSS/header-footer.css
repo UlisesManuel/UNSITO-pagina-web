@@ -1,31 +1,47 @@
-/* ===== HEADER GENERAL ===== */
+/* ==== VARIABLES ==== */
+:root {
+    --rojo-unsis: #770000;
+    --texto-oscuro: #444444;
+    --blanco: #ffffff;
+    --gris-borde: #eeeeee;
+    --gris-fondo: #f8f8f8;
+    --sombra-suave: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    --sombra-fuerte: 0px 8px 24px rgba(0,0,0,0.12);
+    --transicion: 0.3s ease;
+}
+
+/* ==== RESET Y BASE ==== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==== CABECERA ==== */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 5%; 
-    background-color: #ffffff;
-    border-bottom: 1px solid #eee;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    background-color: var(--blanco);
+    border-bottom: 1px solid var(--gris-borde);
+    box-shadow: var(--sombra-suave);
     position: sticky; 
     top: 0;
     z-index: 1000;
 }
 
-/* Contenedor logo y título */
 .cont {
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
-/* Logo */
 .logo {
     width: 70px;
     height: auto;
 }
 
-/* Título */
 .titulo {
     font-family: 'Playfair Display', serif;
     font-variant: small-caps;
@@ -34,32 +50,35 @@ header {
 
 .titulo a {
     text-decoration: none;
-    color: #770000;
+    color: var(--rojo-unsis);
 }
 
-/* ===== MENÚ ===== */
+/* ==== NAVEGACIÓN Y MENÚ ==== */
+.check-menu {
+    display: none;
+}
+
 .menu.txt {
     display: flex;
     align-items: center;
     gap: 30px;
 }
 
-/* Enlaces del menú */
 .menu.txt a {
     text-decoration: none;
-    color: #444;
+    color: var(--texto-oscuro);
     font-weight: 600;
     font-size: 16px;
-    transition: color 0.3s ease;
+    transition: color var(--transicion);
     position: relative;
 }
 
 .menu.txt a:hover, 
 .menu.txt .dropdown:hover .dropbtn {
-    color: #770000; 
+    color: var(--rojo-unsis); 
 }
 
-/* Efecto de línea inferior en Hover */
+/* Efecto de línea inferior */
 .menu.txt a:not(:has(img))::after {
     content: "";
     position: absolute;
@@ -67,23 +86,23 @@ header {
     bottom: -5px;
     width: 0;
     height: 2px;
-    background-color: #770000;
-    transition: width 0.3s ease;
+    background-color: var(--rojo-unsis);
+    transition: width var(--transicion);
 }
 
 .menu.txt a:not(:has(img)):hover::after {
     width: 100%;
 }
 
-/* Icono del usuarip usuario */
+/* Icono de usuario */
 .menu.txt img {
     width: 35px;
     height: 35px;
-    background: #f8f8f8;
+    background: var(--gris-fondo);
     padding: 6px;
     border-radius: 50%;
     border: 1px solid #ddd;
-    transition: all 0.3s ease;
+    transition: var(--transicion);
     vertical-align: middle;
 }
 
@@ -92,11 +111,12 @@ header {
     transform: scale(1.1);
 }
 
-/* ===== DROPDOWN ===== */
+/* ==== lista desplegable de actividades ==== */
 .dropdown {
     position: relative;
     display: inline-block;
 }
+
 .dropbtn {
     cursor: pointer;
     padding-bottom: 5px;
@@ -108,89 +128,111 @@ header {
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #ffffff;
+    background-color: var(--blanco);
     min-width: 180px;
-    box-shadow: 0px 8px 24px rgba(0,0,0,0.12);
+    box-shadow: var(--sombra-fuerte);
     border-radius: 8px;
     overflow: hidden;
-    margin-top: 0;
-    border: 1px solid #eee;
+    border: 1px solid var(--gris-borde);
 }
 
 .dropdown-content a {
-    color: #444; 
+    color: var(--texto-oscuro); 
     padding: 12px 16px;
     font-size: 14px;
     display: block;
 }
 
 .dropdown-content a::after {
-    display: none;
+    display: none; /* Quita la línea roja en los enlaces */
 }
 
 .dropdown-content a:hover {
     background-color: #f7f7f7;
-    color: #770000 !important;
+    color: var(--rojo-unsis) !important;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
-    animation: slideDown .8ms ease;
+    animation: slideDown .8ms ease; 
 }
 
-/* ===== RESPONSIVO ===== */
+/* ==== RESPONSIVO ==== */
+.boton-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.boton-menu span {
+    width: 30px;
+    height: 3px;
+    background-color: var(--rojo-unsis);
+    transition: var(--transicion);
+}
+
 @media (max-width: 850px) {
-    header {
-        flex-direction: column;
-        padding: 20px;
-        gap: 15px;
+    .boton-menu {
+        display: flex;
     }
-    
+
     .menu.txt {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--blanco);
+        padding: 20px;
+        box-shadow: var(--sombra-suave);
+        gap: 20px;
+    }
+    .check-menu:checked ~ .menu.txt {
+        display: flex;
     }
 }
-/*=== Footer==*/
-.footer{
-    background-color: #770000;
-    color: white;
+
+/* ==== FOOTER ==== */
+.footer {
+    background-color: var(--rojo-unsis);
+    color: var(--blanco);
     padding: 30px 20px;
     text-align: center;
 }
 
-.footer-contenido{
+.footer-contenido {
     max-width: 1200px;
-    margin: 0 0;
+    margin: 0 auto; 
 }
 
-.footer-texto{
+.footer-texto {
     font-size: 20px;
     margin-bottom: 15px;
     letter-spacing: 1px;
 }
 
-.footer-redes{
+.footer-redes {
     display: flex;
     justify-content: center;
     gap: 25px;
     margin-bottom: 15px;
 }
 
-.footer-redes img{
+.footer-redes img {
     width: 32px;
     height: 32px;
     filter: brightness(0) invert(1); 
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: var(--transicion);
 }
 
-.footer-redes img:hover{
+.footer-redes img:hover {
     transform: scale(1.2);
     opacity: 0.8;
 }
 
-.footer-copy{
+.footer-copy {
     font-size: 14px;
     opacity: 0.85;
 }
