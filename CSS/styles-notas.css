@@ -57,6 +57,14 @@
     margin-bottom: 18px;
     text-align: justify;
 }
+.p_normal{
+    font-weight: normal;
+    font-size: 1.7rem;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 18px;
+    text-align: justify;
+}
 
 /* Primer párrafo destacado */
 .contenido p:first-of-type {
