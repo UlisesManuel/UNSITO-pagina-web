@@ -158,38 +158,26 @@ header {
 }
 
 /* ==== RESPONSIVO ==== */
-.boton-menu {
+.menu-check {
+    display: none;
+}
+
+.menu-btn {
     display: none;
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
 }
 
-.boton-menu span {
-    width: 30px;
-    height: 3px;
-    background-color: var(--rojo-unsis);
-    transition: var(--transicion);
-}
-
 @media (max-width: 850px) {
-    .boton-menu {
+    header{
+        flex-direction: column;
+    }
+    .menu-btn {
         display: flex;
     }
 
-    .menu.txt {
-        display: none; 
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: var(--blanco);
-        padding: 20px;
-        box-shadow: var(--sombra-suave);
-        gap: 20px;
-    }
-    .check-menu:checked ~ .menu.txt {
+    .menu-check:checked ~ .menu.txt {
         display: flex;
     }
 }
